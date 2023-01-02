@@ -11,6 +11,7 @@ public class WebConfig implements WebMvcConfigurer{
 
     @Override
     public void addCorsMappings(CorsRegistry registry){
-        registry.addMapping("/**");
+        registry.addMapping("/**")
+                .allowedOrigins("https://portfolio-angular-c52b2.firebaseapp.com", "http://localhost:4200");
     }
 }
