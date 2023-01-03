@@ -28,12 +28,6 @@ public class JwtRequestFilter extends OncePerRequestFilter
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain)
         throws ServletException, IOException
     {
-//        response.addHeader("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT,DELETE");
-//        response.addHeader("Access-Control-Allow-Headers", "authorization, content-type");
-//        response.addHeader("Access-Control-Allow-Credentials", "true");
-//        response.addHeader("Access-Control-Allow-Origin", "http://localhost:4200");
-        
-        logger.warn(request.getHeaderNames());
         final String requestTokenHeader = request.getHeader("Authorization");
         
         String username = null;
