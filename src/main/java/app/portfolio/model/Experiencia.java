@@ -16,14 +16,14 @@ public class Experiencia {
     private String empresa;
     private String puesto;
     private String descripcion;
-    private int inicio;
-    private int fin;
+    private String inicio;
+    private String fin;
     private int persona_id;
 
     public Experiencia() {
     }
 
-    public Experiencia(int id, String empresa, String puesto, String descripcion, int inicio, int fin, int persona_id) {
+    public Experiencia(int id, String empresa, String puesto, String descripcion, String inicio, String fin, int persona_id) {
         this.id = id;
         this.empresa = empresa;
         this.puesto = puesto;

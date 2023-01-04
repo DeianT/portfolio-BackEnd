@@ -44,8 +44,8 @@ public class ExperienciaController {
                                          @RequestParam ("empresa") String empresa,
                                          @RequestParam ("puesto") String puesto,
                                          @RequestParam ("descripcion") String desc,
-                                         @RequestParam ("inicio") int inicio,
-                                         @RequestParam ("fin") int fin,
+                                         @RequestParam ("inicio") String inicio,
+                                         @RequestParam ("fin") String fin,
                                          @RequestParam ("persona_id") int persona_id)
     {
         Experiencia exp = service.findExperiencia(id);

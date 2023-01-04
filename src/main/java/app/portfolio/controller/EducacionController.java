@@ -41,8 +41,8 @@ public class EducacionController {
     public Educacion editarEducacion(@PathVariable int id,
                                     @RequestParam ("nombre") String nombre,
                                     @RequestParam ("descripcion") String descripcion,
-                                    @RequestParam ("inicio") int inicio,
-                                    @RequestParam ("fin") int fin,
+                                    @RequestParam ("inicio") String inicio,
+                                    @RequestParam ("fin") String fin,
                                     @RequestParam ("persona_id") int persona_id)
     {
         Educacion edu = service.findEducacion(id);

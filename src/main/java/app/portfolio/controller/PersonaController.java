@@ -2,7 +2,6 @@ package app.portfolio.controller;
 
 import app.portfolio.model.Persona;
 import app.portfolio.service.IPersonaService;
-import java.util.Date;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -43,7 +42,7 @@ public class PersonaController {
     @PutMapping("personas/editar/{id}")
     public Persona editPersona(@PathVariable int id,
                                 @RequestParam ("nombre") String nombre,
-//                                @RequestParam ("fecha_nac") Date fecha_nac,
+                                @RequestParam ("fecha_nac") String fecha_nac,
                                 @RequestParam ("acerca_de") String acerca_de,
                                 @RequestParam ("correo") String correo,
                                 @RequestParam ("instagram") String instagram,
@@ -55,7 +54,7 @@ public class PersonaController {
     {
         Persona perso = interPersona.findPersona(id);
         perso.setNombre(nombre);
-//        perso.setFecha_nac(fecha_nac);
+        perso.setFecha_nac(fecha_nac);
         perso.setAcerca_de(acerca_de);
         perso.setCorreo(correo);
         perso.setInstagram(instagram);

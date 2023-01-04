@@ -1,6 +1,5 @@
 package app.portfolio.model;
 
-import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,7 +14,7 @@ public class Persona {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String nombre;
-    private Date fecha_nac;
+    private String fecha_nac;
     private String acerca_de;
     private String correo;
     private String instagram;
@@ -28,7 +27,9 @@ public class Persona {
     public Persona() {
     }
 
-    public Persona(int id, String nombre, Date fecha_nac, String acerca_de, String correo, String instagram, String linkedin, String github, String url_foto, String url_logo, String url_banner) {
+    public Persona(int id, String nombre, String fecha_nac, String acerca_de, String correo, String instagram, String linkedin, 
+            String github, String url_foto, String url_logo, String url_banner) 
+    {
         this.id = id;
         this.nombre = nombre;
         this.fecha_nac = fecha_nac;

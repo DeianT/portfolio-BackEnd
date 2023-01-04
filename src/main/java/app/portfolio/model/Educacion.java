@@ -15,14 +15,14 @@ public class Educacion {
     private int id;
     private String nombre;
     private String descripcion;
-    private int inicio;
-    private int fin;
+    private String inicio;
+    private String fin;
     private int persona_id;
 
     public Educacion() {
     }
 
-    public Educacion(int id, String nombre, String descripcion, int inicio, int fin, int persona_id) {
+    public Educacion(int id, String nombre, String descripcion, String inicio, String fin, int persona_id) {
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
