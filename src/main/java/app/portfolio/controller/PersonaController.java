@@ -53,16 +53,26 @@ public class PersonaController {
                                 @RequestParam ("url_banner") String url_banner)
     {
         Persona perso = interPersona.findPersona(id);
-        perso.setNombre(nombre);
-        perso.setFecha_nac(fecha_nac);
-        perso.setAcerca_de(acerca_de);
-        perso.setCorreo(correo);
-        perso.setInstagram(instagram);
-        perso.setLinkedin(linkedin);
-        perso.setGithub(github);
-        perso.setUrl_foto(url_foto);
-        perso.setUrl_logo(url_logo);
-        perso.setUrl_banner(url_banner);
+        if (!"".equals(nombre))
+            perso.setNombre(nombre);
+        if (!"".equals(fecha_nac))
+            perso.setFecha_nac(fecha_nac);
+        if (!"".equals(acerca_de))
+            perso.setAcerca_de(acerca_de);
+        if (!"".equals(correo))
+            perso.setCorreo(correo);
+        if (!"".equals(instagram))
+            perso.setInstagram(instagram);
+        if (!"".equals(linkedin))
+            perso.setLinkedin(linkedin);
+        if (!"".equals(github))
+            perso.setGithub(github);
+        if (!"".equals(url_foto))
+            perso.setUrl_foto(url_foto);
+        if (!"".equals(url_logo))
+            perso.setUrl_logo(url_logo);
+        if (!"".equals(url_banner))
+            perso.setUrl_banner(url_banner);
         
         interPersona.savePersona(perso);
         
