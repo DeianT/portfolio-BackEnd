@@ -37,7 +37,7 @@ public class EducacionController {
        return "Educación eliminada";
     }
     
-    @PutMapping("educacion/editar{id}")
+    @PutMapping("educacion/editar/{id}")
     public Educacion editarEducacion(@PathVariable int id,
                                     @RequestParam ("nombre") String nombre,
                                     @RequestParam ("descripcion") String descripcion,
