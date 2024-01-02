@@ -50,11 +50,16 @@ public class ExperienciaController {
     {
         Experiencia exp = service.findExperiencia(id);
         
-        exp.setEmpresa(empresa);
-        exp.setPuesto(puesto);
-        exp.setDescripcion(desc);
-        exp.setInicio(inicio);
-        exp.setFin(fin);
+        if(!empresa.equals(""))
+            exp.setEmpresa(empresa);
+        if(!puesto.equals(""))
+            exp.setPuesto(puesto);
+        if(!desc.equals(""))
+            exp.setDescripcion(desc);
+        if(!inicio.equals(""))
+            exp.setInicio(inicio);
+        if(!fin.equals(""))
+            exp.setFin(fin);
         exp.setPersona_id(persona_id);
         
         service.saveExperiencia(exp);

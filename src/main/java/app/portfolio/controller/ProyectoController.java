@@ -49,10 +49,14 @@ public class ProyectoController {
     {
         Proyecto pro = service.findProyecto(id);
         
-        pro.setNombre(nombre);
-        pro.setDescripcion(descripcion);
-        pro.setLink(link);
-        pro.setUrl_img(url_img);
+        if(!nombre.equals(""))
+            pro.setNombre(nombre);
+        if(!descripcion.equals(""))
+            pro.setDescripcion(descripcion);
+        if(!link.equals(""))
+            pro.setLink(link);
+        if(!url_img.equals(""))
+            pro.setUrl_img(url_img);
         pro.setPersona_id(persona_id);
         
         service.saveProyecto(pro);

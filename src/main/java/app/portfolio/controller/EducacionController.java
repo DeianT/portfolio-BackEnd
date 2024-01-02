@@ -49,10 +49,14 @@ public class EducacionController {
     {
         Educacion edu = service.findEducacion(id);
         
-        edu.setNombre(nombre);
-        edu.setDescripcion(descripcion);
-        edu.setInicio(inicio);
-        edu.setFin(fin);
+        if(!nombre.equals(""))
+            edu.setNombre(nombre);
+        if(!descripcion.equals(""))
+            edu.setDescripcion(descripcion);
+        if(!inicio.equals(""))
+            edu.setInicio(inicio);
+        if(!fin.equals(""))
+            edu.setFin(fin);
         edu.setPersona_id(persona_id);
         
         service.saveEducacion(edu);
