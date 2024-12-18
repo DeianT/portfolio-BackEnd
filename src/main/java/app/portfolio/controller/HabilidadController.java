@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin(origins = {"http://localhost:4200", "https://portfolio-angular-c52b2.firebaseapp.com"})
+@CrossOrigin(origins = {"https://portfolio-angular-c52b2.web.app", "https://portfolio-angular-c52b2.firebaseapp.com"})
 public class HabilidadController {
     @Autowired
     private IHabilidadService service;
